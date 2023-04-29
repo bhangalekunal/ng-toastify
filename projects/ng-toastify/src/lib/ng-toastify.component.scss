@@ -1,0 +1,232 @@
+$toast-colors: (
+    primary: #3f51b5,
+    secondary: #9c27b0,
+    accent: #ff9800,
+    neutral: #607d8b,
+    success: #4caf50,
+    error: #f44336,
+    warning: #ff9800,
+    info: #2196f3,
+);
+
+$toast-background-colors: (
+    primary: #e8eaf6,
+    secondary: #ede7f6,
+    accent: #ffe0b2,
+    neutral: #cfd8dc,
+    success: #e8f5e9,
+    error: #ffebee,
+    warning: #fff3e0,
+    info: #e3f2fd,
+);
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    // font-family: "Poppins",sans-serif;
+    // font-size: 14px;
+}
+
+@mixin position-common-properties {
+    max-width: 480px;
+    width: auto;
+    position: absolute;
+}
+
+.top-left {
+    @include position-common-properties;
+    transform: translate(-1%, -5%);
+    left: 1%;
+    top: 5%;
+}
+
+.top-middle {
+    @include position-common-properties;
+    transform: translate(-50%, -5%);
+    top: 5%;
+    left: 50%;
+}
+
+.top-right {
+    @include position-common-properties;
+    transform: translate(-1%, -5%);
+    top: 5%;
+    right: 1%;
+}
+
+.middle-left {
+    @include position-common-properties;
+    transform: translate(-1%, -50%);
+    top: 50%;
+    left: 1%;
+}
+
+
+.middle-middle {
+    @include position-common-properties;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+}
+
+.middle-right {
+    @include position-common-properties;
+    transform: translate(-1%, -50%);
+    top: 50%;
+    right: 1%;
+}
+
+
+.bottom-left {
+    @include position-common-properties;
+    transform: translate(-1%, -5%);
+    bottom: 5%;
+    left: 1%;
+}
+
+.bottom-middle {
+    @include position-common-properties;
+    transform: translate(-50%, -5%);
+    bottom: 5%;
+    left: 50%;
+}
+
+.bottom-right {
+    @include position-common-properties;
+    transform: translate(-1%, -5%);
+    bottom: 5%;
+    right: 1%;
+}
+
+.toast {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.3fr 6fr 0.5fr;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    z-index: 9999;
+    transition: .5s;
+
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &.primary {
+        border-left: 6px solid map-get($toast-colors, primary);
+        background-color: map-get($toast-background-colors, primary);
+
+        i {
+            color: map-get($toast-colors, primary);
+        }
+    }
+
+    &.secondary {
+        border-left: 6px solid map-get($toast-colors, secondary);
+        background-color: map-get($toast-background-colors, secondary);
+
+        i {
+            color: map-get($toast-colors, secondary);
+        }
+    }
+
+    &.accent {
+        border-left: 6px solid map-get($toast-colors, accent);
+        background-color: map-get($toast-background-colors, accent);
+
+        i {
+            color: map-get($toast-colors, accent);
+        }
+    }
+
+    &.neutral {
+        border-left: 6px solid map-get($toast-colors, neutral);
+        background-color: map-get($toast-background-colors, neutral);
+
+        i {
+            color: map-get($toast-colors, neutral);
+        }
+    }
+
+    &.success {
+        border-left: 6px solid map-get($toast-colors, success);
+        background-color: map-get($toast-background-colors, success);
+
+        i {
+            color: map-get($toast-colors, success);
+        }
+    }
+
+    &.error {
+        border-left: 6px solid map-get($toast-colors, error);
+        background-color: map-get($toast-background-colors, error);
+
+        i {
+            color: map-get($toast-colors, error);
+        }
+    }
+
+    &.info {
+        border-left: 6px solid map-get($toast-colors, info);
+        background-color: map-get($toast-background-colors, info);
+
+        i {
+            color: map-get($toast-colors, info);
+        }
+    }
+
+    &.warning {
+        border-left: 6px solid map-get($toast-colors, warning);
+        background-color: map-get($toast-background-colors, warning);
+
+        i {
+            color: map-get($toast-colors, warning);
+        }
+    }
+
+    .outer-container,
+    .inner-container {
+        align-self: center;
+    }
+
+    .outer-container i {
+        font-size: 2rem;
+    }
+
+
+    .inner-container {
+        font-family: "Poppins", sans-serif;
+
+        p:first-child {
+            color: #101020;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        p:last-child {
+            font-size: 12px;
+            font-weight: 400;
+            color: #656565;
+        }
+
+    }
+
+    button {
+        align-self: flex-start;
+        background-color: transparent;
+        font-size: 20px;
+        color: #656565;
+        line-height: 0;
+        cursor: pointer;
+        margin-right: -30px;
+    }
+
+}

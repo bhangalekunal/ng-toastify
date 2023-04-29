@@ -1,0 +1,12 @@
+<div [ngClass]="getPositonClasses()">
+    <div class="toast" [ngClass]="getToastTypeClasses()">
+        <div class="outer-container">
+            <i [ngClass]="getToastIconClasses()"></i>
+        </div>
+        <div class="inner-container">
+            <p>{{ toastConfig.title }}</p>
+            <p>{{ toastConfig.message }}</p>
+        </div>
+        <button (click)="closeToast()">&times;</button>
+    </div>
+</div>
