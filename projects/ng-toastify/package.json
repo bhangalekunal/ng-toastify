@@ -1,6 +1,29 @@
 {
   "name": "ng-toastify",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "A customizable and responsive toast notification library for Angular.",
+  "author": "Kunal Bhangale",
+  "license": "MIT",
+  "keywords": [
+    "Toast",
+    "Notification",
+    "Alert",
+    "Toaster",
+    "Toastify",
+    "Library",
+    "UI",
+    "UX",
+    "Design",
+    "Customizable",
+    "Responsive",
+    "Mobile-friendly",
+    "Accessibility",
+    "Angular"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bhangalekunal/ng-toastify.git"
+  },
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
