@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgToastifyComponent } from './ng-toastify.component';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -8,6 +9,7 @@ import { NgToastifyComponent } from './ng-toastify.component';
     NgToastifyComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     NgToastifyComponent
